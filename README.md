@@ -66,9 +66,17 @@ The base URL for all API endpoints is http://localhost:5000.
 
 User Authentication
 POST /api/users/register
-Description: Registers a new user.
+Detail
 
-Access: Public
+Value
+
+Description
+
+Registers a new user.
+
+Access
+
+Public
 
 Body:
 
@@ -86,9 +94,17 @@ Success Response:
 }
 
 POST /api/users/login
-Description: Logs in an existing user and returns a JWT token.
+Detail
 
-Access: Public
+Value
+
+Description
+
+Logs in an existing user and returns a JWT token.
+
+Access
+
+Public
 
 Body:
 
@@ -105,11 +121,21 @@ Success Response:
 
 Job Listings
 POST /api/jobs
-Description: Creates a new job listing.
+Detail
 
-Access: Private (Requires employer role)
+Value
 
-Headers: x-auth-token: <your_employer_token>
+Description
+
+Creates a new job listing.
+
+Access
+
+Private (Requires employer role)
+
+Headers
+
+x-auth-token: <your_employer_token>
 
 Body:
 
@@ -123,19 +149,37 @@ Body:
 Success Response: Returns the newly created job object.
 
 GET /api/jobs
-Description: Retrieves a list of all available jobs.
+Detail
 
-Access: Public
+Value
+
+Description
+
+Retrieves a list of all available jobs.
+
+Access
+
+Public
 
 Success Response: Returns an array of job objects.
 
 Job Applications
 POST /api/applications/:jobId
-Description: Submits an application for a specific job.
+Detail
 
-Access: Private (Requires job_seeker role)
+Value
 
-Headers: x-auth-token: <your_job_seeker_token>
+Description
+
+Submits an application for a specific job.
+
+Access
+
+Private (Requires job_seeker role)
+
+Headers
+
+x-auth-token: <your_job_seeker_token>
 
 Success Response:
 
@@ -144,11 +188,21 @@ Success Response:
 }
 
 GET /api/applications/:jobId
-Description: Retrieves all applications for a specific job.
+Detail
 
-Access: Private (Requires employer role)
+Value
 
-Headers: x-auth-token: <your_employer_token>
+Description
+
+Retrieves all applications for a specific job.
+
+Access
+
+Private (Requires employer role)
+
+Headers
+
+x-auth-token: <your_employer_token>
 
 Success Response: Returns an array of application objects for the specified job.
 
